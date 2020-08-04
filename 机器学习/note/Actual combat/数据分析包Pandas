@@ -1,0 +1,21 @@
+# coding=utf-8
+import pandas as pd
+#创建一个表 列名使用colums指定
+dl = pd.DataFrame([[1,2,3],[4,5,6]],columns=['a','b','c'])
+n=3
+print(dl.head(n)) #显示前n行数据
+print(dl.describe())#显示统计量
+#######################
+
+#pandas中两种类型：Series（一维）、DataFrame（二维）
+a = pd.Series([4,7,-5,3])
+print("普通Series：",a)
+
+#创建一个带有索引来确定每个数据的Series
+b = pd.Series([4,7,-5,3],index=['d','v','a','c'])
+print("索引Series:",b)
+
+#通过字典创建Series (key作为Seriec的索引,values作为Series的值)
+sdata = {'a':1,'b':2,'c':3}
+c = pd.Series(sdata)
+print(c)
